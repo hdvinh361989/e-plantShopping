@@ -38,6 +38,18 @@ body {
     text-decoration: none;
    
 }
+/*Menu*/
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1100px;
+}
+.menu-item{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
 
 /* Product Grid */
 .product-grid {
