@@ -39,7 +39,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        uses: JamesIves/github-pages-deploy-action@v4.6.3
         with:
           branch: deploy  # The branch GitHub Pages will use
           folder: dist      # The folder containing your build files
