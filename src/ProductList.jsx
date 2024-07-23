@@ -217,6 +217,7 @@ function ProductList() {
     const [showCart, setShowCart] = useState(false);
     const dispatch=useDispatch();
     const addedToCart = useSelector((state)=> state.cart.items)
+    const totalItems = useMemo(() => addedToCart.reduce((total,item) =>total+ item.quantity,0), [addedToCart]);
     const addedToCartNames = useMemo(() => addedToCart.map((item) => item.name), [addedToCart]);
 
     const categoryTemplates = plantsArray.map(({category, plants}) => {
@@ -296,7 +297,7 @@ function ProductList() {
                                     fill="none" stroke="#faf9f9" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2" id="mainIconPathAttribute"></path>
                             </svg>
-                            <span className="cart_quantity_count">{addedToCart.length}</span>
+                            <span className="cart_quantity_count">{totalItems}</span>
                         </h1>
                     </a></div>
                 </div>
